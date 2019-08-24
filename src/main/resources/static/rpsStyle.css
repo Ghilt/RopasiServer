@@ -1,0 +1,77 @@
+  body {
+  padding-top: 20px;
+  font-family: monaco, monospace;
+  background: url("bgstrip.jpg") 100%;
+  background-repeat: repeat-x;
+}
+h1, h2 {
+  display: inline-block;
+  background: #fff;
+}
+h1 {
+  font-size: 30px
+}
+h2 {
+  font-size: 20px;
+}
+
+div {
+  padding: 80px;
+  background: #FFF;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+input[type='radio'], label{
+   display:inline;
+   font-size: 20px;
+   vertical-align:middle;
+}
+
+input[type="radio"] {
+    background-color: #efeeff;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+                0 0 0 1px hsla(0,0%,0%,.6),
+                0 2px 3px hsla(0,0%,0%,.6);
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    margin: 7px;
+    position: relative;
+    width: 30px;
+    -webkit-appearance: none;
+}
+input[type="radio"]:after {
+    background-color: #444;
+    border-radius: 50px;
+    content: '';
+    display: block;
+    height: 14px;
+    left: 8px;
+    position: relative;
+    top: 8px;
+    width: 14px;
+}
+input[type="radio"]:checked:after {
+    background-color: #54f;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
+                inset 0 2px 2px hsla(0,0%,100%,.4);
+}
+
+input[type="submit"] {
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+                0 0 0 1px hsla(0,0%,0%,.6);
+    background-color: #efeeff;
+    border-radius: 3px;
+    border-color: #54f;
+    border-width: 6px;
+    border-style: none none none solid;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+}

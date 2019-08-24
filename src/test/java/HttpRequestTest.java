@@ -24,6 +24,6 @@ public class HttpRequestTest {
     @Test
     public void startPageContainsPlayerPrompt() throws Exception {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
-                String.class)).contains("Which player are you?");
+                String.class)).contains("Select player:");
     }
 }

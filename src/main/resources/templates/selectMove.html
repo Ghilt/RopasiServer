@@ -1,26 +1,28 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" type="text/css" href="rpsStyle.css">
     <title>Rock Paper Scissors</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<h1>Time to play!</h1>
-<p th:text="'You have player id ' + ${player.playerId}"/>
+<div>
+    <h1>Time to play!</h1>
+    <p th:text="'You have player id ' + ${player.playerId}"/>
 
-<h1>Choose your move:</h1>
+    <h1>Choose your move:</h1>
 
-<form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='rock')}" method="post">
-    <p><input type="submit" value="Rock!"/></p>
-</form>
+    <form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='rock')}" method="post">
+        <p><input type="submit" value="Rock! ⛰️"/></p>
+    </form>
 
-<form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='paper')}" method="post">
-    <p><input type="submit" value="Paper!"/></p>
-</form>
+    <form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='paper')}" method="post">
+        <p><input type="submit" value="Paper! 📰"/></p>
+    </form>
 
-<form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='scissors')}" method="post">
-    <p><input type="submit" value="Scissors!"/></p>
-</form>
-
+    <form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='scissors')}" method="post">
+        <p><input type="submit" value="Scissors! ✂"/></p>
+    </form>
+</div>
 </body>
 </html>
