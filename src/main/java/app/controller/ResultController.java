@@ -1,21 +1,28 @@
 package app.controller;
 
 import app.Application;
+import app.model.GameState;
 import app.model.Move;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-
 @RestController
 public class ResultController {
+
+    private GameState state;
+
+    public ResultController(GameState state) {
+        this.state = state;
+    }
+
     @RequestMapping("/result")
     public String result() {
 
-        Move p1Move = Application.getPlayerMove(1);
-        Move p2Move = Application.getPlayerMove(2);
+        Move p1Move = state.getPlayerMove(1);
+        Move p2Move = state.getPlayerMove(2);
 
         if (p1Move == null || p2Move == null) {
+            Application.log.info("Result: player 1:" + p1Move + ", player 2:" + p2Move);
             return "⌛ Waiting for the other player. You should spam f5.";
         } else {
             Boolean result = p1Move.isDefeatedBy(p2Move);

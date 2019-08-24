@@ -3,8 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    Peculiar: I Thought I would need the below configs but everything seems to started working as soon as I added this file -->
-<!--    I tried removing this file and things continued working until I did some name refactorings, at which point I had to add it again -->
+    <!--    Peculiar: I Thought I would need the below configs but everything seems to started working as soon as I added this file -->
+    <!--    I tried removing this file and things continued working until I did some name refactorings, at which point I had to add it again -->
 
 <!--    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
 <!--        <property name="customEditors">-->
