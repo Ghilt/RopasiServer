@@ -8,7 +8,12 @@
 <h1>Which player are you?</h1>
 
 <form action="#" th:action="@{/chosePlayer}" th:object="${chosePlayer}" method="post">
-    <p>Id: <input type="number" th:field="*{playerId}"/></p>
+    <ul>
+        <li th:each="player : ${players}">
+            <input type="radio" th:field="*{playerId}" th:value="${player}" />
+            <label th:for="${player}" th:text="${player}"></label>
+        </li>
+    </ul>
     <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
 </form>
 

@@ -12,13 +12,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ChosePlayerController {
 
     @GetMapping("/chosePlayer")
-    public String greetingForm(Model model) {
+    public String loadSelectPlayer(Model model) {
         model.addAttribute("chosePlayer", new RpsMove());
+        model.addAttribute("players", Application.getPlayers());
         return "chosePlayer";
     }
 
     @PostMapping("/chosePlayer")
-    public String greetingSubmit(@ModelAttribute RpsMove chosePlayer) {
+    public String selectPlayer(@ModelAttribute RpsMove chosePlayer) {
         Application.log.info("logging " + chosePlayer.getPlayerId());
         return "choseMove";
     }

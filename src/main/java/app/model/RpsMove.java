@@ -6,7 +6,7 @@ public class RpsMove {
     private Move move;
 
     public RpsMove() {
-        this.playerId = -1;
+        this.playerId = 1;
         this.move = null;
     }
 
