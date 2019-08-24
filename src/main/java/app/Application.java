@@ -1,9 +1,10 @@
 package app;
 
+import app.model.Move;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 // https://spring.io/guides/gs/rest-service/
 // https://machiel.me/post/java-enums-as-request-parameters-in-spring-4/
@@ -11,6 +12,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class Application {
+
+    // Most certainly not the way to actually handle data on a server
+    public static Move p1Move = null;
+    public static Move p2Move = null;
+
+    public static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
         // See beans.xml
