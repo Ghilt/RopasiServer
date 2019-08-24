@@ -6,19 +6,19 @@
 </head>
 <body>
 <h1>Time to play!</h1>
-<p th:text="'You have player id ' + ${rpsMove.playerId}"/>
+<p th:text="'You have player id ' + ${player.playerId}"/>
 
 <h1>Choose your move:</h1>
 
-<form action="#" th:action="@{/choseMove(playerId=${rpsMove.playerId},move='rock')}" method="post">
+<form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='rock')}" method="post">
     <p><input type="submit" value="Rock!"/></p>
 </form>
 
-<form action="#" th:action="@{/choseMove(playerId=${rpsMove.playerId},move='paper')}" method="post">
+<form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='paper')}" method="post">
     <p><input type="submit" value="Paper!"/></p>
 </form>
 
-<form action="#" th:action="@{/choseMove(playerId=${rpsMove.playerId},move='scissors')}" method="post">
+<form action="#" th:action="@{/selectMove(playerId=${player.playerId},move='scissors')}" method="post">
     <p><input type="submit" value="Scissors!"/></p>
 </form>
 

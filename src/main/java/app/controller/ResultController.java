@@ -19,6 +19,8 @@ public class ResultController {
             return "⌛ Waiting for the other player. You should spam f5.";
         } else {
             Boolean result = p1Move.isDefeatedBy(p2Move);
+            Application.log.info("Result: player 1:" + p1Move + ", player 2:" + p2Move + " Outcome: " + result);
+
             StringBuilder builder = new StringBuilder();
             if (result == null) {
                 builder.append("\uD83D\uDE11 It's a draw")

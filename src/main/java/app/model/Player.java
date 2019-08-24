@@ -1,16 +1,16 @@
 package app.model;
 
-public class RpsMove {
+public class Player {
 
     private long playerId;
     private Move move;
 
-    public RpsMove() {
+    public Player() {
         this.playerId = 1;
         this.move = null;
     }
 
-    public RpsMove(long playerId, Move move) {
+    public Player(long playerId, Move move) {
         this.playerId = playerId;
         this.move = move;
     }

@@ -7,7 +7,7 @@
 <body>
 <h1>Which player are you?</h1>
 
-<form action="#" th:action="@{/chosePlayer}" th:object="${chosePlayer}" method="post">
+<form action="#" th:action="@{/selectPlayer}" th:object="${selectPlayer}" method="post">
     <ul>
         <li th:each="player : ${players}">
             <input type="radio" th:field="*{playerId}" th:value="${player}" />

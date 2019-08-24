@@ -1,5 +1,5 @@
 import app.Application;
-import app.controller.ChosePlayerController;
+import app.controller.SelectPlayerController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ApplicationTest {
 
     @Autowired
-    private ChosePlayerController controller;
+    private SelectPlayerController controller;
 
     @Test
     public void contextLoads() throws Exception {
